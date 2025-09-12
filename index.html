@@ -1,162 +1,159 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learn With Smile — Spoken English & Personality Development in Kolkata</title>
-  <meta name="description" content="Learn With Smile by Sunanda Dey — Spoken English with grammar, interview preparation, group discussion, and personality development. Online & offline classes." />
-  <meta name="theme-color" content="#111827" />
+  <title>Learn With Smile — English & Personality Development | Kolkata (Offline) & Pan-India Online</title>
+  <meta name="description" content="Learn With Smile: modern English fluency & personality development for real-world success. Kolkata-based for offline classes, and online across Pan India." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
   <style>
     :root{
-      --bg:#0b0f19;          /* deep ink */
-      --panel:#121a2b;       /* card bg */
-      --muted:#9aa4b2;
-      --text:#eef2f7;
-      --brand:#7c3aed;       /* violet */
-      --accent:#22d3ee;      /* cyan */
-      --ring: 0 0 0 3px rgba(124,58,237,.35);
-      --radius: 16px;
-      --shadow-lg: 0 10px 30px rgba(0,0,0,.35), 0 6px 12px rgba(0,0,0,.25);
-      --shadow-sm: 0 6px 18px rgba(0,0,0,.25);
-      --maxw: 1200px;
+      /* Palette — white + butterscotch + teal + orange */
+      --bg:#fffdf8;            /* soft white */
+      --butter:#ffd28d;        /* butterscotch */
+      --butter-2:#ffebb8;      /* pale butter */
+      --teal:#0ea5a6;          /* teal */
+      --orange:#f97316;        /* orange */
+      --ink:#0f172a;           /* heading/body ink */
+      --muted:#5b6478;         /* muted text */
+      --ring:0 0 0 3px rgba(14,165,166,.25);
+      --radius:16px;
+      --maxw:1200px;
+      --shadow-sm:0 6px 16px rgba(15,23,42,.08);
+      --shadow-lg:0 24px 60px rgba(15,23,42,.10);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0;
-      background:
-        radial-gradient(1200px 600px at 90% -10%, rgba(124,58,237,.12), transparent 60%),
-        radial-gradient(1000px 500px at -10% 10%, rgba(34,211,238,.10), transparent 60%),
-        var(--bg);
-      color:var(--text);
-      font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.55;
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6;
     }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;border-radius:calc(var(--radius) - 4px)}
+    img{max-width:100%; height:auto; border-radius:14px}
+    a{color:inherit; text-decoration:none}
     .container{max-width:var(--maxw); margin-inline:auto; padding-inline:24px}
+    .kicker{font-weight:800; color:#475569; letter-spacing:.22em; text-transform:uppercase; font-size:.8rem}
+    .headline{
+      font-family:"Playfair Display", serif; line-height:1.08; letter-spacing:.2px;
+      font-size:clamp(2rem,3.2vw + 1.1rem,4rem);
+    }
+    .subhead{font-size:clamp(1rem,.8vw + .95rem,1.2rem); color:var(--muted)}
+    .pill{display:inline-flex; align-items:center; gap:.45rem; padding:.35rem .7rem; border-radius:999px; border:1px dashed rgba(15,23,42,.2); background:#fff; font-weight:600}
+
+    /* Buttons */
     .btn{
-      display:inline-flex; align-items:center; gap:.6rem;
-      padding:.9rem 1.2rem; border-radius:12px;
-      background:linear-gradient(135deg,var(--brand),#4f46e5);
-      color:white; font-weight:700; letter-spacing:.2px;
-      box-shadow:var(--shadow-sm); border:1px solid rgba(255,255,255,.12);
-      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+      display:inline-flex; align-items:center; gap:.65rem;
+      padding:.95rem 1.2rem; border-radius:12px; font-weight:800; letter-spacing:.2px;
+      border:0; box-shadow:var(--shadow-sm); cursor:pointer; transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
     }
     .btn:hover{transform:translateY(-1px); box-shadow:var(--shadow-lg)}
+    .btn--primary{
+      background:linear-gradient(135deg, var(--teal), #12b7b8); color:white;
+    }
+    .btn--secondary{
+      background:linear-gradient(135deg, var(--orange), #fb923c); color:#1f2937;
+    }
     .btn--ghost{
-      background:transparent; border:1px solid rgba(255,255,255,.18);
-      color:var(--text);
+      background:#fff; border:1px solid rgba(15,23,42,.12); color:#0f172a;
     }
-    .chip{
-      display:inline-flex; align-items:center; gap:.4rem;
-      padding:.35rem .6rem; border-radius:999px;
-      background:rgba(124,58,237,.14); color:#e9ddff;
-      border:1px solid rgba(124,58,237,.35); font-weight:600; font-size:.85rem;
-    }
-    .muted{color:var(--muted)}
-    .headline{
-      font-family:"Playfair Display", serif;
-      font-weight:700; line-height:1.1; letter-spacing:.2px;
-      font-size:clamp(2rem, 3.2vw + 1.2rem, 4rem);
-    }
-    .subhead{
-      font-size:clamp(1rem, .8vw + .9rem, 1.25rem);
-      color:#cfd6e3; max-width:60ch;
-    }
-    /* NAV */
+
+    /* Nav */
     .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background:linear-gradient(180deg, rgba(11,15,25,.85), rgba(11,15,25,.65));
-      border-bottom:1px solid rgba(255,255,255,.08);
+      position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85);
+      backdrop-filter: blur(10px); border-bottom:1px solid rgba(15,23,42,.08);
     }
     .nav__bar{display:flex; align-items:center; justify-content:space-between; padding:14px 24px}
-    .brand{display:flex; align-items:center; gap:.75rem; font-weight:800; letter-spacing:.3px}
+    .brand{display:flex; align-items:center; gap:.75rem; font-weight:900}
     .brand__logo{
-      width:36px; height:36px; border-radius:10px;
-      background: radial-gradient(circle at 30% 30%, var(--accent), var(--brand));
-      box-shadow:0 0 0 2px rgba(255,255,255,.08) inset;
+      width:38px; height:38px; border-radius:12px;
+      background:
+        radial-gradient(100% 100% at 20% 20%, var(--butter) 0 40%, transparent 41%),
+        radial-gradient(130% 130% at 80% 80%, var(--orange) 0 40%, transparent 41%),
+        linear-gradient(135deg, var(--teal), #23c6c7);
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,.5), 0 4px 12px rgba(14,165,166,.35);
     }
-    .nav a{opacity:.9}
-    .nav a:hover{opacity:1}
-    .nav__links{display:flex; gap:24px; align-items:center}
+    .nav__links{display:flex; gap:22px; align-items:center}
     .nav__toggle{display:none}
-    @media (max-width: 900px){
+    @media (max-width:900px){
       .nav__links{display:none}
       .nav__toggle{display:block}
       .nav.open .nav__links{
-        position:fixed; inset:64px 16px auto 16px;
-        display:flex; flex-direction:column; gap:8px;
-        padding:14px; background:var(--panel); border-radius:14px; box-shadow:var(--shadow-lg)
+        display:flex; position:fixed; inset:64px 16px auto 16px;
+        flex-direction:column; gap:10px; padding:14px; background:#ffffff; border:1px solid rgba(15,23,42,.1); border-radius:14px; box-shadow:var(--shadow-lg)
       }
     }
-    /* HERO */
-    .section{padding:80px 0}
-    .hero{padding:96px 0 40px}
-    .hero__grid{
-      display:grid; grid-template-columns: 1.15fr .85fr; gap:42px; align-items:center;
-    }
-    @media (max-width:1000px){.hero__grid{grid-template-columns:1fr}}
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.10); border-radius:var(--radius);
-      box-shadow:var(--shadow-sm); overflow:hidden;
-    }
-    .card__pad{padding:24px}
-    .stat{display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08)}
-    .grid{display:grid; gap:22px}
-    .grid--2{grid-template-columns:repeat(2,1fr)}
-    .grid--3{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.grid--2,.grid--3{grid-template-columns:1fr}}
-    /* SERVICES */
-    .service{
-      display:grid; grid-template-columns: 56px 1fr; gap:18px;
-      padding:18px; border-radius:14px; background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.08);
-    }
-    .icon{
-      width:56px; height:56px; display:grid; place-items:center; border-radius:14px;
-      background:linear-gradient(135deg, rgba(124,58,237,.35), rgba(34,211,238,.35));
-      border:1px solid rgba(255,255,255,.15)
-    }
-    /* CTA band */
-    .cta{
-      margin-top:24px; border-radius:16px; overflow:hidden; position:relative;
+
+    /* Sections */
+    .section{padding:84px 0}
+    .hero{padding:110px 0 50px; position:relative}
+    .hero::before{
+      content:""; position:absolute; inset:-120px -40px auto auto; height:320px; width:520px; z-index:-1;
       background:
-        radial-gradient(600px 200px at 20% -20%, rgba(34,211,238,.18), transparent 60%),
-        linear-gradient(135deg, rgba(124,58,237,.27), rgba(124,58,237,.14) 60%, rgba(34,211,238,.14));
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow:var(--shadow-lg);
+        radial-gradient(260px 260px at 78% 25%, rgba(255,210,141,.55), transparent 60%),
+        radial-gradient(240px 240px at 35% 65%, rgba(14,165,166,.25), transparent 60%);
+      filter:blur(8px);
     }
-    .cta__inner{padding:28px}
-    /* ABOUT */
-    .about__cards{display:grid; grid-template-columns:1.2fr .8fr; gap:22px}
-    @media (max-width:1000px){.about__cards{grid-template-columns:1fr}}
-    /* HOURS */
-    .hours{display:flex; gap:18px; flex-wrap:wrap}
-    .hours .hcol{flex:1 1 260px}
-    /* FORM */
+    .grid{display:grid; gap:22px}
+    .grid--2{grid-template-columns:1fr 1fr}
+    .grid--3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:1000px){.grid--2,.grid--3{grid-template-columns:1fr}}
+
+    /* Cards */
+    .card{
+      background:#ffffff; border:1px solid rgba(15,23,42,.08); border-radius:var(--radius); box-shadow:var(--shadow-sm);
+    }
+    .card__pad{padding:22px}
+
+    /* Accent bands */
+    .band{
+      border-radius:18px; overflow:hidden; border:1px solid rgba(15,23,42,.08); box-shadow:var(--shadow-lg);
+      background:
+        radial-gradient(650px 250px at 10% -20%, rgba(255,210,141,.45), transparent 60%),
+        radial-gradient(450px 250px at 100% 0%, rgba(14,165,166,.25), transparent 60%),
+        linear-gradient(180deg, #fff, #fff);
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:.5rem; padding:.45rem .7rem; border-radius:999px;
+      background:linear-gradient(135deg, var(--butter-2), #fff); border:1px solid rgba(15,23,42,.12); font-weight:700; color:#92400e;
+    }
+
+    /* Lists */
+    .tick{display:flex; gap:.65rem; align-items:flex-start}
+    .tick svg{margin-top:.2rem}
+
+    /* Form */
     form{display:grid; gap:14px}
+    label{font-weight:700; font-size:.95rem}
     input, textarea{
-      width:100%; padding:14px 14px; border-radius:12px; background:#0f1729; color:var(--text);
-      border:1px solid rgba(255,255,255,.14); outline:none; font:inherit
+      width:100%; padding:14px 14px; border-radius:12px; background:#fff; color:var(--ink);
+      border:1px solid rgba(15,23,42,.15); outline:none; font:inherit;
     }
-    input:focus, textarea:focus{box-shadow:var(--ring); border-color:rgba(124,58,237,.55)}
-    label{font-weight:600; font-size:.95rem}
-    .footer{
-      border-top:1px solid rgba(255,255,255,.10);
-      padding:28px 0 60px; color:#c8d0db; font-size:.95rem
-    }
-    .kicker{font-weight:800; letter-spacing:.25em; font-size:.8rem; color:#a3b0c2; text-transform:uppercase}
-    .pill{padding:.25rem .55rem; border:1px solid rgba(255,255,255,.15); border-radius:999px; font-weight:600; font-size:.8rem; color:#cfd6e3}
+    input:focus, textarea:focus{box-shadow:var(--ring); border-color:rgba(14,165,166,.6)}
+
     /* Tiny animations */
     .reveal{opacity:0; transform:translateY(12px); transition:all .6s cubic-bezier(.2,.6,.2,1)}
     .reveal.show{opacity:1; transform:none}
+
+    .footer{border-top:1px solid rgba(15,23,42,.08); padding:28px 0 60px; color:#475569; font-size:.95rem}
+
+    /* Avatar row */
+    .avatars{display:flex; align-items:center}
+    .avatars img{width:40px; height:40px; object-fit:cover; border-radius:999px; border:2px solid #fff; margin-left:-10px}
+    .avatars img:first-child{margin-left:0}
+
+    /* Price table */
+    .price{
+      border:2px solid var(--butter); background:#fff; position:relative;
+    }
+    .price.best::after{
+      content:"Most Popular"; position:absolute; top:-12px; right:18px; background:var(--orange); color:#111827;
+      padding:.25rem .6rem; border-radius:999px; font-weight:800; font-size:.75rem; box-shadow:var(--shadow-sm);
+    }
+
+    /* Emphasis */
+    .underline-swoosh{background:linear-gradient(180deg, transparent 60%, rgba(255,210,141,.9) 0); box-shadow:0 6px 0 rgba(255,210,141,.9)}
   </style>
 </head>
 <body>
@@ -168,213 +165,282 @@
         <span>LEARN WITH SMILE</span>
       </a>
       <nav class="nav__links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#founder">Founder</a>
-        <a href="#contact">Contact</a>
-        <a href="#hours" class="pill">Open Hours</a>
+        <a href="#problems">Problems We Solve</a>
+        <a href="#programs">Programs</a>
+        <a href="#results">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="pill">Book Now</a>
       </nav>
-      <button class="nav__toggle btn btn--ghost" aria-label="Toggle menu" onclick="document.querySelector('.nav').classList.toggle('open')">
-        Menu
-      </button>
+      <button class="nav__toggle btn btn--ghost" aria-label="Toggle menu" onclick="document.querySelector('.nav').classList.toggle('open')">Menu</button>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero__grid">
-      <div class="reveal">
-        <span class="chip">Spoken English & Personality Development</span>
-        <h1 class="headline" style="margin:.6rem 0 1rem;">
-          English made easier. Confidence made natural.
-        </h1>
-        <p class="subhead">
-          Tailored skills training that suits your needs and budget — with both online and offline classes. Learn to speak, write, and listen with clarity and confidence.
-        </p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px">
-          <a class="btn" href="#contact">
-            Book a Consultation
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7-7 7"/>
-            </svg>
-          </a>
-          <a class="btn btn--ghost" href="#services">See Services</a>
-        </div>
+    <div class="container">
+      <div class="grid grid--2">
+        <div class="reveal">
+          <span class="badge">Career • Daily Life • Professional Growth</span>
+          <h1 class="headline" style="margin:.6rem 0 1rem">
+            English that <span class="underline-swoosh">opens doors</span> — to better jobs, clearer meetings, and everyday confidence.
+          </h1>
+          <p class="subhead">
+            You already think clearly. We help you speak it — in interviews, offices, classrooms, and life.
+          </p>
 
-        <div class="cta" style="margin-top:24px">
-          <div class="cta__inner">
-            <div class="grid grid--3">
-              <div class="stat"><strong>15+ years</strong> <span class="muted">of English study</span></div>
-              <div class="stat"><strong>1:1 attention</strong> <span class="muted">no rigid timeframes</span></div>
-              <div class="stat"><strong>Online & Offline</strong> <span class="muted">Kolkata-based</span></div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px">
+            <a class="btn btn--primary" href="#contact">
+              Start with a Free Call
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#problems">See how we help</a>
+          </div>
+
+          <div class="band" style="margin-top:22px">
+            <div class="card__pad" style="display:flex; gap:18px; align-items:center; flex-wrap:wrap">
+              <div class="avatars">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Student 1">
+                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop" alt="Student 2">
+                <img src="https://images.unsplash.com/photo-1710778044102-56a3a6b69a1b?q=80&w=200&auto=format&fit=crop" alt="Student 3">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=200&auto=format&fit=crop" alt="Student 4">
+              </div>
+              <div style="font-weight:700">1,000+ lessons delivered • 98% recommend us</div>
+              <div class="pill">Offline in Kolkata • Online Pan-India</div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="reveal">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop" alt="Learning English with confidence">
-        </div>
-        <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
-          <span class="pill">Reading</span>
-          <span class="pill">Speaking</span>
-          <span class="pill">Listening</span>
-          <span class="pill">Grammar</span>
-          <span class="pill">Interviews</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container reveal about__cards">
-      <div class="card">
-        <div class="card__pad">
-          <div class="kicker">About</div>
-          <h2 style="margin:.4rem 0 1rem">Start learning for the future.</h2>
-          <p class="muted" style="max-width:62ch">
-            Personality development is a characteristic set of behaviours, attitudes, ways of thinking, and emotional patterns that distinguish a person from the rest of the crowd.
-            The unique attributes that differentiate one person from another are a result of individual personalities. A person’s values and physical, mental, and social qualities are integral to his/her character.
-          </p>
-          <p class="muted" style="margin-top:.6rem">
-            Studied English over <strong>15+ years</strong> from reputed university—English medium background and a multilinguist—Sunanda is passionate about motivating students to develop skills and fluency in English.
-          </p>
-          <div style="display:flex; gap:10px; margin-top:16px">
-            <a class="btn" href="#contact">Get in Touch</a>
-            <a class="btn btn--ghost" href="#hours">View Open Hours</a>
+        <div class="reveal">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1517530094915-500495b15ade?q=80&w=1600&auto=format&fit=crop" alt="Learners practicing speaking in a friendly class">
           </div>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <div class="card__pad">
-            <h3 style="margin-top:0">Why Learn With Smile?</h3>
-            <ul class="muted" style="padding-left:1.1rem; margin: .6rem 0">
-              <li>Minute attention to every student, no rigid time-bound rush.</li>
-              <li>Balanced focus on speaking, reading, and listening.</li>
-              <li>Compassionate guidance backed by years of teaching.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card" id="founder">
-          <div class="card__pad">
-            <div class="kicker">Founder</div>
-            <h3 style="margin:.3rem 0">Sunanda Dey</h3>
-            <p class="muted">Founder & Advisor — Spoken English & Personality Development</p>
-            <p class="muted">
-              “Hey, I am Sunanda from Kolkata, helping you to learn English in better and easier ways.”
-            </p>
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
+            <span class="pill">Interviews</span>
+            <span class="pill">Meetings</span>
+            <span class="pill">Emails</span>
+            <span class="pill">Presentations</span>
+            <span class="pill">Group Discussion</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
+  <!-- PROBLEMS -->
+  <section class="section" id="problems">
+    <div class="container reveal">
+      <div class="kicker">Marketing Lens</div>
+      <h2 style="margin:.4rem 0 1rem">Real-life problems we fix fast</h2>
+      <p class="subhead">From the elevator pitch to the final interview — we coach the moments that matter.</p>
+
+      <div class="grid grid--3" style="margin-top:18px">
+        <div class="card"><div class="card__pad">
+          <div class="tick">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h3 style="margin:.2rem 0">Interview Freeze</h3>
+              <p class="subhead" style="font-size:1rem">Answers in your head, but not out loud? We build repeatable stories + mock Q&A to win offers.</p>
+            </div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <div class="tick">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="var(--teal)" stroke-width="2"/></svg>
+            <div>
+              <h3 style="margin:.2rem 0">Meeting Nerves</h3>
+              <p class="subhead" style="font-size:1rem">Speak up without overthinking. Short scripts for updates, objections, and difficult clients.</p>
+            </div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <div class="tick">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="var(--teal)" stroke-width="2"/></svg>
+            <div>
+              <h3 style="margin:.2rem 0">Grammar Gaps</h3>
+              <p class="subhead" style="font-size:1rem">Fix the 20% rules that make 80% of the difference. Clear, simple, memorable.</p>
+            </div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <div class="tick">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="var(--teal)" stroke-width="2"/></svg>
+            <div>
+              <h3 style="margin:.2rem 0">Email Confusion</h3>
+              <p class="subhead" style="font-size:1rem">Templates for introductions, follow-ups, negotiations, and feedback — ready to copy.</p>
+            </div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <div class="tick">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="var(--teal)" stroke-width="2"/></svg>
+            <div>
+              <h3 style="margin:.2rem 0">Group Discussion</h3>
+              <p class="subhead" style="font-size:1rem">Lead without dominating. Signals for entry, handover, agreement, and disagreement.</p>
+            </div>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <div class="tick">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="var(--teal)" stroke-width="2"/></svg>
+            <div>
+              <h3 style="margin:.2rem 0">Time-Poor Schedules</h3>
+              <p class="subhead" style="font-size:1rem">Short, powerful sessions that fit work + study. Online & offline, Kolkata-based.</p>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section" id="programs">
     <div class="container">
       <div class="reveal">
-        <div class="kicker">Services</div>
-        <h2 style="margin:.4rem 0 1.2rem">What we offer</h2>
+        <div class="kicker">Programs</div>
+        <h2 style="margin:.4rem 0 1.2rem">Choose your path — we’ll tailor it to you</h2>
       </div>
 
       <div class="grid grid--2 reveal">
-        <div class="service">
-          <div class="icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-              <path d="M4 19h16M4 5h16M7 5v14M17 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3 style="margin:.2rem 0">Spoken English with Grammar</h3>
-            <p class="muted">From basic grammar to a broader view of English, focusing on reading, speaking, and listening.</p>
-          </div>
-        </div>
-
-        <div class="service">
-          <div class="icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-              <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M3 10v6l9 5 9-5v-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3 style="margin:.2rem 0">Interview Preparation</h3>
-            <p class="muted">Be comfortable and confident through mock Q&A, feedback, and structured practice.</p>
+        <div class="card">
+          <div class="card__pad">
+            <h3 style="margin-top:0">Spoken English + Grammar</h3>
+            <p class="subhead" style="font-size:1rem">From foundations to fluent — reading, speaking, listening with smart drills and real-world tasks.</p>
+            <ul class="subhead" style="font-size:1rem; padding-left:1.2rem">
+              <li>Fix-topics: tenses, prepositions, articles, pronunciation</li>
+              <li>Micro-presentations & storytelling practice</li>
+              <li>Weekly progress review & feedback</li>
+            </ul>
+            <a class="btn btn--secondary" href="#contact">Ask about this track</a>
           </div>
         </div>
 
-        <div class="service">
-          <div class="icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
-              <path d="M5.5 21a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3 style="margin:.2rem 0">Group Discussion</h3>
-            <p class="muted">Practice leadership, communication, teamwork, listening, and professional politeness.</p>
-          </div>
-        </div>
-
-        <div class="service">
-          <div class="icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-              <path d="M12 3v18M6 7h6M6 12h12M6 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3 style="margin:.2rem 0">Spoken English & Personality Development</h3>
-            <p class="muted">Grow fluency alongside mindset, etiquette, and presentation for real-life situations.</p>
+        <div class="card">
+          <div class="card__pad">
+            <h3 style="margin-top:0">Career Accelerator</h3>
+            <p class="subhead" style="font-size:1rem">Interview, resume, and meeting mastery for professionals & job-seekers.</p>
+            <ul class="subhead" style="font-size:1rem; padding-left:1.2rem">
+              <li>ATS-ready resume & elevator pitch</li>
+              <li>Mock interviews (HR + technical) with scorecards</li>
+              <li>Email & meeting scripts for daily work</li>
+            </ul>
+            <a class="btn btn--secondary" href="#contact">Book a strategy call</a>
           </div>
         </div>
       </div>
 
-      <div class="reveal" style="margin-top:22px">
-        <a class="btn" href="#contact">Start Learning Now</a>
+      <div class="band reveal" style="margin-top:22px">
+        <div class="card__pad">
+          <div class="grid grid--3">
+            <div><strong style="font-size:1.6rem; color:var(--teal)">15+</strong><div class="subhead" style="font-size:1rem">years in English study</div></div>
+            <div><strong style="font-size:1.6rem; color:var(--orange)">1:1</strong><div class="subhead" style="font-size:1rem">attention — zero rush</div></div>
+            <div><strong style="font-size:1.6rem; color:#334155">Online & Offline</strong><div class="subhead" style="font-size:1rem">Kolkata sessions</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HOURS -->
-  <section class="section" id="hours">
+  <!-- RESULTS / TESTIMONIALS -->
+  <section class="section" id="results">
     <div class="container reveal">
-      <div class="card">
-        <div class="card__pad">
-          <div class="kicker">Open Hours</div>
-          <div class="hours" style="margin-top:12px">
-            <div class="hcol">
-              <p><strong>Monday – Friday:</strong> 9:00 AM – 7:00 PM</p>
-              <p><strong>Saturday:</strong> 10:30 AM – 8:00 PM</p>
-              <p><strong>Sunday:</strong> 12:00 PM – 8:00 PM</p>
-              <p class="muted" style="font-size:.9rem">*Holiday hours may vary.</p>
-            </div>
-            <div class="hcol">
-              <div class="stat">
-                <span>Online & Offline classes available</span>
-              </div>
-              <p class="muted" style="margin-top:.8rem">Kolkata-based sessions with flexible scheduling.</p>
-            </div>
+      <div class="kicker">Proof</div>
+      <h2 style="margin:.4rem 0 1rem">Results our learners are proud of</h2>
+
+      <div class="grid grid--3" style="margin-top:18px">
+        <div class="card"><div class="card__pad">
+          <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=1200&auto=format&fit=crop" alt="Young professional smiling">
+          <p style="margin:.8rem 0 0"><strong>Ria • Analyst</strong></p>
+          <p class="subhead" style="font-size:1rem">“Got two offers in 3 weeks. The mock interviews were exactly like the real ones.”</p>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?q=80&w=1200&auto=format&fit=crop" alt="Manager presenting confidently">
+          <p style="margin:.8rem 0 0"><strong>Arjun • Manager</strong></p>
+          <p class="subhead" style="font-size:1rem">“Weekly scripts made my meetings crisp. Team finally listens.”</p>
+        </div></div>
+
+        <div class="card"><div class="card__pad">
+          <img src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?q=80&w=1200&auto=format&fit=crop" alt="Student studying abroad">
+          <p style="margin:.8rem 0 0"><strong>Meera • Student</strong></p>
+          <p class="subhead" style="font-size:1rem">“Grammar shortcuts + speaking drills = real confidence on campus.”</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="reveal">
+        <div class="kicker">Simple Pricing</div>
+        <h2 style="margin:.4rem 0 1rem">Start now — upgrade anytime</h2>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <div class="card price">
+          <div class="card__pad">
+            <h3 style="margin-top:0">Kickstart</h3>
+            <p class="subhead" style="font-size:1rem">4 sessions</p>
+            <h4 style="margin:.3rem 0 1rem; color:#1f2937"><span style="font-size:2rem">₹</span><span style="font-size:2rem; font-weight:900">1,999</span></h4>
+            <ul class="subhead" style="font-size:1rem; padding-left:1.2rem">
+              <li>Level check + plan</li>
+              <li>Interview or grammar focus</li>
+              <li>Homework templates</li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Get Kickstart</a>
+          </div>
+        </div>
+
+        <div class="card price best">
+          <div class="card__pad">
+            <h3 style="margin-top:0">Pro Growth</h3>
+            <p class="subhead" style="font-size:1rem">12 sessions</p>
+            <h4 style="margin:.3rem 0 1rem; color:#1f2937"><span style="font-size:2rem">₹</span><span style="font-size:2rem; font-weight:900">4,999</span></h4>
+            <ul class="subhead" style="font-size:1rem; padding-left:1.2rem">
+              <li>Full speaking + email playbook</li>
+              <li>2 mock interviews + feedback</li>
+              <li>Weekly review & roadmap</li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Choose Pro</a>
+          </div>
+        </div>
+
+        <div class="card price">
+          <div class="card__pad">
+            <h3 style="margin-top:0">1:1 Executive</h3>
+            <p class="subhead" style="font-size:1rem">Custom plan</p>
+            <h4 style="margin:.3rem 0 1rem; color:#1f2937"><span style="font-size:2rem">₹</span><span style="font-size:2rem; font-weight:900">On Request</span></h4>
+            <ul class="subhead" style="font-size:1rem; padding-left:1.2rem">
+              <li>Role-play for high-stakes meetings</li>
+              <li>Speechwriting & slides review</li>
+              <li>Private, flexible scheduling</li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Talk to us</a>
           </div>
         </div>
       </div>
+
+      <p class="subhead" style="margin-top:10px">*Scholarships available for students. Ask during your free call.</p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container">
-      <div class="grid grid--2 reveal">
-        <div class="card">
+      <div class="grid grid--2">
+        <!-- WHATSAPP CONTACT FORM -->
+        <div class="card reveal">
           <div class="card__pad">
             <div class="kicker">Contact</div>
-            <h2 style="margin:.4rem 0 1rem">Book a consultation</h2>
+            <h2 style="margin:.4rem 0 1rem">Send us a WhatsApp</h2>
 
-            <form id="contactForm" action="https://formspree.io/f/xbldnyyl" method="POST">
-              <!-- Replace the action above with your real endpoint or a mailto: -->
+            <!-- WhatsApp Form (opens WhatsApp Send API link with your custom message) -->
+            <form id="contactForm">
               <div>
                 <label for="name">Name</label>
                 <input id="name" name="name" placeholder="Your full name" required />
@@ -384,39 +450,84 @@
                 <input id="email" name="email" type="email" placeholder="you@example.com" required />
               </div>
               <div>
-                <label for="tel">Telephone</label>
-                <input id="tel" name="telephone" type="tel" placeholder="+91 89816 72404" />
+                <label for="tel">Your Phone (optional)</label>
+                <input id="tel" name="telephone" type="tel" placeholder="+91 9XXXXXXXXX" />
               </div>
               <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell me what you’d like to work on…" required></textarea>
+                <label for="message">What do you want to improve?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Interviews? Meetings? Grammar? Something else?" required></textarea>
               </div>
-              <button class="btn" type="submit">Send Message</button>
-              <p id="formNote" class="muted" style="margin-top:8px"></p>
+              <button class="btn btn--primary" type="submit">
+                Send via WhatsApp
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 12h14m-7-7 7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <p id="formNote" class="subhead" style="margin-top:8px"></p>
             </form>
+            <!-- End WhatsApp Form -->
           </div>
         </div>
 
-        <div class="card">
+        <!-- ADDRESS + MAP -->
+        <div class="card reveal">
           <div class="card__pad">
-            <h3 style="margin-top:0">Location & Direct Contact</h3>
-            <p class="muted">
-              <strong>Address:</strong><br/>
-              75/2/4, Raja Ram Mohan Roy Road,<br/>
+            <h3 style="margin-top:0">Where to find us</h3>
+            <p class="subhead" style="font-size:1rem">
+              <strong>Address</strong><br>
+              75/2/4, Raja Ram Mohan Roy Road,<br>
               Kolkata — 700008
             </p>
-            <p class="muted"><strong>Phone:</strong> <a href="tel:+918981672404">8981672404</a></p>
-            <p class="muted"><strong>Email:</strong> <a href="mailto:learnwithsmile@proton.me">learnwithsmile@proton.me</a></p>
+            <p class="subhead" style="font-size:1rem"><strong>Phone:</strong> <a href="tel:+918981672404">8981672404</a></p>
+            <p class="subhead" style="font-size:1rem"><strong>Email:</strong> <a href="mailto:learnwithsmile@proton.me">learnwithsmile@proton.me</a></p>
 
-            <div class="card" style="margin-top:12px">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.391614377587!2d88.32461207507514!3d22.489485579550994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027b0735dcc47b%3A0xd553415802b5698e!2sLEARN%20WITH%20SMILE!5e0!3m2!1sen!2sit!4v1757678363530!5m2!1sen!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Google Maps (responsive) -->
+            <div style="margin-top:12px; border-radius:14px; overflow:hidden; border:1px solid rgba(15,23,42,.08)">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7372.783206356567!2d88.327187!3d22.489486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027b0735dcc47b%3A0xd553415802b5698e!2sLEARN%20WITH%20SMILE!5e0!3m2!1sen!2sit!4v1757682194625!5m2!1sen!2sit"
+                width="100%" height="320" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="band" style="margin-top:12px">
+              <div class="card__pad">
+                <div class="kicker">Open Hours</div>
+                <p style="margin:.4rem 0 0"><strong>Mon–Fri:</strong> 9:00 AM – 7:00 PM</p>
+                <p style="margin:.2rem 0 0"><strong>Sat:</strong> 10:30 AM – 8:00 PM • <strong>Sun:</strong> 12:00 PM – 8:00 PM</p>
+                <p class="subhead" style="font-size:.95rem">*Holiday hours may vary</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END ADDRESS + MAP -->
+      </div>
+
+      <!-- FAQ quick hits -->
+      <div class="reveal" style="margin-top:22px">
+        <div class="band">
+          <div class="card__pad">
+            <div class="kicker">FAQ</div>
+            <div class="grid grid--3" style="margin-top:10px">
+              <div>
+                <h4>Do you teach beginners?</h4>
+                <p class="subhead" style="font-size:1rem">Yes. We start from your level and move fast with clarity.</p>
+              </div>
+              <div>
+                <h4>Online or in-person?</h4>
+                <p class="subhead" style="font-size:1rem">Both. Zoom/Meet or Kolkata sessions at flexible times.</p>
+              </div>
+              <div>
+                <h4>Can you help only with interviews?</h4>
+                <p class="subhead" style="font-size:1rem">Absolutely — resume polish, stories, and repeated mocks.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="reveal" style="margin-top:22px; text-align:center">
-        <a class="btn btn--ghost" href="#top">Back to Top</a>
+      <!-- Final CTA -->
+      <div class="reveal" style="text-align:center; margin-top:22px">
+        <a class="btn btn--secondary" href="#top">Back to Top</a>
       </div>
     </div>
   </section>
@@ -425,9 +536,11 @@
     <div class="container" style="display:flex; gap:18px; justify-content:space-between; flex-wrap:wrap">
       <div>
         <strong>LEARN WITH SMILE</strong><br/>
-        <span class="muted">© 2020–<script>document.write(new Date().getFullYear())</script> Learn With Smile. All rights reserved.</span>
+        <span>© 2020–<script>document.write(new Date().getFullYear())</script> Learn With Smile. All rights reserved.</span>
       </div>
-      <div class="muted">Crafted in Kolkata • Made with ☺</div>
+      <div style="color:#111827; font-weight:700">
+        Made with <span style="color:var(--orange)">●</span> butterscotch & <span style="color:var(--teal)">●</span> teal
+      </div>
     </div>
   </footer>
 
@@ -440,25 +553,62 @@
     }, {rootMargin:'-10% 0px'});
     document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-    // Simple contact feedback (works even without backend)
-    const form = document.getElementById('contactForm');
-    const note = document.getElementById('formNote');
-    if(form){
-      form.addEventListener('submit', function(ev){
-        if(!form.checkValidity()){
-          ev.preventDefault();
-          note.textContent = 'Please fill in the required fields.';
-          return;
-        }
-        note.textContent = 'Thanks! Your message has been sent.';
-        // Allow default form submission to Formspree if configured.
-      });
-    }
-
-    // Close mobile menu when navigating
+    // Close mobile menu on link click
     document.querySelectorAll('.nav a').forEach(a=>{
       a.addEventListener('click', ()=>document.querySelector('.nav')?.classList.remove('open'));
     });
+
+    // --- WhatsApp form handler ---
+    // Destination WhatsApp number (business/owner). Use full international format without '+'.
+    const DEST_WA_NUMBER = "918981672404"; // +91 8981672404
+
+    const form = document.getElementById('contactForm');
+    const note = document.getElementById('formNote');
+
+    function buildWhatsAppURL({name, email, tel, message}) {
+      // Compose a concise, readable message
+      const lines = [
+        "Hello Learn With Smile 👋",
+        "",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        tel ? `Phone: ${tel}` : null,
+        "",
+        "I'd like help with:",
+        message
+      ].filter(Boolean);
+
+      const text = encodeURIComponent(lines.join("\n"));
+      // Works on mobile & desktop WhatsApp Web
+      return `https://api.whatsapp.com/send?phone=${DEST_WA_NUMBER}&text=${text}`;
+      // Alternative short form: `https://wa.me/${DEST_WA_NUMBER}?text=${text}`
+    }
+
+    if(form){
+      form.addEventListener('submit', function(ev){
+        ev.preventDefault();
+
+        // Basic HTML5 validation
+        if(!form.checkValidity()){
+          note.textContent = 'Please fill in the required fields.';
+          note.style.color = '#b91c1c';
+          return;
+        }
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const tel = document.getElementById('tel').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const url = buildWhatsAppURL({name, email, tel, message});
+        // Open WhatsApp chat in new tab / app
+        window.open(url, '_blank');
+
+        note.textContent = 'Opening WhatsApp… if nothing happens, please ensure WhatsApp (app or web) is available on your device.';
+        note.style.color = '#065f46';
+      });
+    }
+    // --- End WhatsApp form handler ---
   </script>
 </body>
 </html>
